@@ -1,0 +1,26 @@
+{
+  "root": true,
+  "project": {
+    "name": "trafo"
+  },
+  "api": {
+    "projectId": "wd60ezy4",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/date-input",
+    "@sanity/google-maps-input",
+    "vision"
+  ],
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema.js"
+    }
+  ]
+}

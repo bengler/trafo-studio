@@ -1,0 +1,30 @@
+{
+  "name": "trafo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "sanity start",
+    "test": "sanity check"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "^0.111.5",
+    "@sanity/components": "^0.111.5",
+    "@sanity/core": "^0.111.5",
+    "@sanity/date-input": "^0.111.5",
+    "@sanity/default-layout": "^0.111.5",
+    "@sanity/default-login": "^0.111.5",
+    "@sanity/desk-tool": "^0.111.5",
+    "@sanity/google-maps-input": "^0.111.5",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "sanity-plugin-vision": "^0.111.5"
+  },
+  "devDependencies": {}
+}
