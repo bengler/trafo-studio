@@ -44,19 +44,5 @@ export default {
       name: 'trafoType',
       type: 'string'
     }
-  ],
-
-  preview: {
-    select: {
-      title: 'title',
-      imageUrl: 'image.asset.url'
-    },
-    prepare(selection) {
-      const {tile, imageUrl} = selection
-      return Object.assign({}, selection, {
-        title: title,
-        imageUrl: imageUrl ? `${imageUrl}?w=100` : imageUrl
-      })
-    }
-  }
+  ]
 }
