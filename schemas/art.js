@@ -1,47 +1,62 @@
 export default {
-  name: "art",
-  title: "Art",
-  type: "object",
+  name: 'art',
+  title: 'Art',
+  type: 'object',
   fields: [
     {
-      title: "Title",
-      name: "title",
-      type: "string"
+      title: 'Title',
+      name: 'title',
+      type: 'string'
     },
     {
-      title: "Comment",
-      name: "comment",
-      type: "string"
+      title: 'Comment',
+      name: 'comment',
+      type: 'string'
     },
     {
-      title: "Image",
-      name: "image",
-      type: "image"
+      title: 'Image',
+      name: 'image',
+      type: 'image'
     },
     {
-      title: "File",
-      name: "file",
-      type: "file"
+      title: 'File',
+      name: 'file',
+      type: 'file'
     },
     {
-      title: "Text",
-      name: "text",
-      type: "blockContent"
+      title: 'Text',
+      name: 'text',
+      type: 'array',
+      of: [{type: 'block'}]
     },
     {
-      title: "Trafo User ID",
-      name: "trafoUserId",
-      type: "number"
+      title: 'Trafo User ID',
+      name: 'trafoUserId',
+      type: 'number'
+    },
+    {
+      title: 'External ID',
+      name: 'externalId',
+      type: 'number'
+    },
+    {
+      title: 'Trafo Type',
+      name: 'trafoType',
+      type: 'string'
     }
-    {
-      title: "External ID",
-      name: "externalId",
-      type: "number"
+  ],
+
+  preview: {
+    select: {
+      title: 'title',
+      imageUrl: 'image.asset.url'
     },
-    {
-      title: "Trafo Type",
-      name: "trafoType",
-      type: "string"
+    prepare(selection) {
+      const {tile, imageUrl} = selection
+      return Object.assign({}, selection, {
+        title: title,
+        imageUrl: imageUrl ? `${imageUrl}?w=100` : imageUrl
+      })
     }
-  ]
-};
+  }
+}
